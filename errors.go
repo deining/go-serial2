@@ -101,7 +101,7 @@ func (e PortError) Code() PortErrorCode {
 }
 
 // Cause returns the cause for the error
-// Deprecated: Use go1.13 error iterface Unwrap() instead.
+// Deprecated: Use go1.13 error interface Unwrap() instead.
 func (e PortError) Cause() error {
 	return e.Unwrap()
 }

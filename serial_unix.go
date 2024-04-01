@@ -56,7 +56,7 @@ func Open(name string, opts ...Option) (*Port, error) {
 	}
 
 	// does nothing in build for android
-	if err = accquireExclusiveAccess(h); err != nil {
+	if err = acquireExclusiveAccess(h); err != nil {
 		return nil, newPortOSError(multierr.Append(err, unix.Close(h)))
 	}
 

@@ -14,7 +14,7 @@ import (
 	"golang.org/x/sys/unix"
 )
 
-func accquireExclusiveAccess(h int) error {
+func acquireExclusiveAccess(h int) error {
 	return unix.IoctlSetInt(h, unix.TIOCEXCL, 0)
 }
 
